@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cafetería Escolar — Sistema de Pedidos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>CAFETERÍA ESCOLAR</h1>
+    <p>Sistema de Pedidos</p>
+  </header>
+
+  <!-- Formulario de pedido -->
+  <section class="card">
+    <h2>Nuevo Pedido</h2>
+
+    <form id="formPedido">
+      <label for="cliente">Cliente:</label>
+      <input type="text" id="cliente" placeholder="Escriba su nombre" required>
+
+      <label for="producto">Producto:</label>
+      <select id="producto" required>
+        <option value="P001">Pupusa - $0.75</option>
+        <option value="P002">Hamburguesa - $2.50</option>
+        <option value="P003">Pizza - $2.00</option>
+        <option value="P004">Taco - $1.50</option>
+        <option value="P005">Jugo - $1.00</option>
+        <option value="P006">Agua - $0.75</option>
+      </select>
+
+      <label for="cantidad">Cantidad:</label>
+      <input type="number" id="cantidad" min="1" value="1" required>
+
+      <fieldset>
+        <legend>Método de pago:</legend>
+        <label class="radio">
+          <input type="radio" name="pago" value="Efectivo" checked> Efectivo
+        </label>
+        <label class="radio">
+          <input type="radio" name="pago" value="Tarjeta"> Tarjeta
+        </label>
+      </fieldset>
+
+      <button type="submit" class="btn">REALIZAR PEDIDO</button>
+    </form>
+  </section>
+
+  <!-- Ticket del último pedido -->
+  <section class="card" id="seccionTicket" hidden>
+    <pre id="ticket"></pre>
+    <button class="btn btn-secundario" id="btnDescargar">DESCARGAR pedidos.txt</button>
+  </section>
+
+  <!-- Consultar pedidos -->
+  <section class="card">
+    <h2>Consultar Pedidos</h2>
+    <button class="btn btn-secundario" id="btnCargar">CARGAR PEDIDOS.TXT</button>
+
+    <table id="tablaPedidos">
+      <thead>
+        <tr>
+          <th>Código</th>
+          <th>Cliente</th>
+          <th>Producto</th>
+          <th>Cantidad</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </section>
+
+  <!-- Resumen de ventas -->
+  <section class="card" id="seccionResumen" hidden>
+    <pre id="resumen"></pre>
+  </section>
+
+  <footer>
+    <p>Proyecto 3 — Cafetería Escolar con TXT</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

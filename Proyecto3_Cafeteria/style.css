@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(135deg, #4e342e, #8d6e63);
+  min-height: 100vh;
+  padding: 20px;
+  color: #3e2723;
+}
+
+header {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 25px;
+}
+
+header h1 {
+  letter-spacing: 3px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+header p {
+  opacity: 0.85;
+}
+
+.card {
+  background: #fff;
+  max-width: 500px;
+  margin: 0 auto 20px;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.card h2 {
+  text-align: center;
+  margin-bottom: 18px;
+  color: #5d4037;
+}
+
+label {
+  display: block;
+  margin-top: 12px;
+  font-weight: 600;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #bcaaa4;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+fieldset {
+  margin-top: 15px;
+  border: 1px solid #bcaaa4;
+  border-radius: 6px;
+  padding: 10px;
+}
+
+legend {
+  font-weight: 600;
+}
+
+.radio {
+  margin-top: 5px;
+  font-weight: normal;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background: #5d4037;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn:hover {
+  background: #3e2723;
+}
+
+.btn-secundario {
+  background: #8d6e63;
+}
+
+.btn-secundario:hover {
+  background: #5d4037;
+}
+
+pre {
+  background: #263238;
+  color: #cfd8dc;
+  padding: 18px;
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 1.6;
+  overflow-x: auto;
+  white-space: pre;
+}
+
+table {
+  width: 100%;
+  margin-top: 18px;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #d7ccc8;
+}
+
+th {
+  background: #5d4037;
+  color: #fff;
+}
+
+tbody tr:nth-child(even) {
+  background: #efebe9;
+}
+
+footer {
+  text-align: center;
+  color: #efebe9;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 18px;
+  }
+  table {
+    font-size: 12px;
+  }
+}
